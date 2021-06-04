@@ -60,7 +60,7 @@ html {
 }
 
 body {
-  margin: var(--header-height) 0 0 0;
+  margin: 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
@@ -120,7 +120,8 @@ img {
 
 /* --**LAYOUT**-- */
 .container {
-  max-width: 768px;
+  max-width: 960px;
+  width: calc(100% - 2rem);
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
 }
@@ -131,9 +132,108 @@ img {
   gap: 1.5rem;
 }
 
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: var(--z-fixed);
+  background-color: transparent;
+}
+
 /* --**NAV**-- */
+.nav {
+  max-width: 1024px;
+  height: var(--header-height);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--body-color);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    z-index: var(--z-fixed);
+  }
+}
+
+.nav__item {
+  margin-bottom: var(--mb-2);
+}
+
+.nav__logo {
+  width: 150px;
+}
+
+.nav__link {
+  color: var(--text-color);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.nav__link:hover {
+  color: var(--title-color);
+}
+
+.nav__toggle {
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 1rem;
+  border-radius: 37%;
+}
+
+.nav__toggle div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 0.2rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-radius: 1rem;
+}
+
 /* --**Show Menu*-- */
+.show-menu {
+  left: 0;
+}
+
 /* --**HOME**-- */
+.home {
+  position: relative;
+  background-color: var(--frist-color);
+  min-height: 100vh;
+}
+
+.bg-home-alt {
+  width: 50vw;
+  height: 100vh;
+  background: var(--second-color);
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-clip-path: polygon(70% 0, 100% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(70% 0, 100% 0%, 100% 100%, 0% 100%);
+}
+
 /* --**BUTTONS**-- */
 /* --**FOOTER**-- */
 /* --**MEDIA QUERIES**-- */
