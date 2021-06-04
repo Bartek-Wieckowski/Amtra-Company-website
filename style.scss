@@ -338,6 +338,9 @@ img {
     padding: 2rem 0 2rem;
     background: var(--second-color);
     border-radius: 0.9rem;
+    width: 80%;
+    position: relative;
+    top: 200px;
     &__container {
         padding: 0 1rem;
     }
@@ -356,6 +359,40 @@ img {
         font-size: 2.5rem;
         margin-right: 1rem;
     }
+}
+/* --**OURS CONTENT**-- */
+.oursContent {
+    background: var(--frist-color);
+    min-height: 100vh;
+    &__container {
+        margin-top: 11rem;
+    }
+}
+.content {
+    background: var(--title-color-alt);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-icon {
+        margin-right: 1rem;
+        font-size: 3rem;
+        padding: 1rem;
+    }
+    &__description {
+        display: none;
+    }
+    &__text {
+        font-weight: var(--font-bold);
+        font-size: 2rem;
+    }
+}
+.icon__link {
+    display: none;
+}
+.bxs-right-arrow-circle {
+    color: var(--color-send);
+    font-size: 2rem;
+    margin-right: 1rem;
 }
 /* --**FOOTER**-- */
 
