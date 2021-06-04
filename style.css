@@ -272,7 +272,7 @@ img {
   border-radius: 1rem;
 }
 
-/* --**Animation toggleX*-- */
+/* --**Animation ToggleX*-- */
 .toggleX .line1 {
   -webkit-transform: rotate(-45deg) translate(-5px, 6px);
           transform: rotate(-45deg) translate(-5px, 6px);
@@ -292,13 +292,29 @@ img {
   right: 0;
 }
 
-/* --**Add background header after scroll*-- */
+/* --**Add Background Header After Scroll*-- */
 .scroll-header {
   background-color: var(--frist-color);
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   -webkit-transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --**Active Menu Link**-- */
+.active-link {
+  position: relative;
+}
+
+.active-link::before {
+  content: "";
+  position: absolute;
+  bottom: -0.75rem;
+  left: 45%;
+  width: 5px;
+  height: 5px;
+  background-color: var(--title-color-alt);
+  border-radius: 50%;
 }
 
 /* --**BUTTONS**-- */
