@@ -192,6 +192,12 @@ img {
                 color: var(--title-color-alt);
                 font-size: var(--h1-font-size);
                 font-weight: var(--font-bold);
+                &:hover {
+                    color: var(--color-send);
+                }
+            }
+            .nav__list--primary {
+                margin-bottom: var(--mb-6);
             }
         }
     }
@@ -205,7 +211,7 @@ img {
         color: var(--text-color);
         transition: 0.3s;
         &:hover {
-            color: var(--title-color);
+            color: var(--color-send);
         }
     }
     &__toggle {
@@ -276,6 +282,12 @@ img {
     &--register {
         width: 100%;
         margin-bottom: var(--mb-1);
+    }
+    &--red {
+        background-color: #dc3545;
+        padding: 0.3rem 1rem;
+        border-radius: 1rem;
+        text-transform: uppercase;
     }
 }
 
@@ -469,7 +481,7 @@ img {
 }
 .close-modal {
     position: absolute;
-    top: 1.2rem;
+    top: 2.75rem;
     right: 2rem;
     font-size: 5rem;
     color: #333;
@@ -588,6 +600,48 @@ img {
     }
     .close-modal {
         font-size: 3rem;
+        top: 3rem;
+    }
+}
+
+// for medium devices
+@media screen and (min-width: 568px) {
+    .home {
+        &__img {
+            width: 300px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .nav {
+        &__menu {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        &__toggle {
+            display: none;
+        }
+        &__list {
+            display: flex;
+            align-items: center;
+
+            &--primary {
+                margin: 0 auto;
+            }
+        }
+        &__item {
+            margin-right: 1rem;
+        }
+    }
+    .nav__item + .nav__item {
+        margin-left: 1rem;
+    }
+    .active-link {
+        &::before {
+            background-color: var(--text-color);
+        }
     }
 }
 
