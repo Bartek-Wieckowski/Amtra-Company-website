@@ -395,6 +395,39 @@ img {
     margin-right: 1rem;
 }
 /* --**FOOTER**-- */
+.footer {
+    background-color: var(--frist-color);
+    border-top: 1px solid var(--text-color-alt);
+
+    &__container {
+        padding: 0 1rem;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    &__logo {
+        font-size: var(--h1-font-size);
+        color: var(--text-color);
+        font-weight: var(--font-bold);
+    }
+    &__description {
+        display: block;
+        margin: 0.25rem 0 var(--mb-3);
+    }
+    &__social {
+        font-size: 1.5rem;
+        color: var(--title-color);
+        margin-right: var(--mb-2);
+        &:hover {
+            color: var(--text-color);
+        }
+    }
+    &__title {
+        font-size: var(--h2-font-size);
+        margin-bottom: var(--mb-3);
+        font-weight: var(--font-bold);
+    }
+}
 
 /* --**MEDIA QUERIES**-- */
 
