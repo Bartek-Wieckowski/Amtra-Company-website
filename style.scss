@@ -241,6 +241,12 @@ img {
 .show-menu {
     right: 0;
 }
+/* --**Add background header after scroll*-- */
+.scroll-header {
+    background-color: var(--frist-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 /* --**BUTTONS**-- */
 .button {
     display: inline-block;

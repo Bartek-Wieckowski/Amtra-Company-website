@@ -17,6 +17,18 @@ theLinks.forEach((link) =>
   })
 );
 
+// Add background header after scroll
+const scrollHeader = function () {
+  const header = document.getElementById("header");
+
+  if (this.scrollY >= 200) {
+    header.classList.add("scroll-header");
+  } else {
+    header.classList.remove("scroll-header");
+  }
+};
+window.addEventListener("scroll", scrollHeader);
+
 // MODAL
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
