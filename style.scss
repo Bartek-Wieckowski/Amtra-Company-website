@@ -1,6 +1,15 @@
 // GOOGLE FONTS
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;700&display=swap");
-
+@keyframes typewriter {
+    to {
+        left: 100%;
+    }
+}
+@keyframes blink {
+    to {
+        background: transparent;
+    }
+}
 /* --**VARIABLES CSS**-- */
 :root {
     --header-height: 3rem;
@@ -222,16 +231,38 @@ img {
     position: relative;
     background-color: var(--frist-color);
     min-height: 100vh;
+
+    &__content {
+        text-align: center;
+        margin: 0 auto;
+    }
     &__img {
         z-index: 1;
+        border-radius: 25%;
     }
     &__data {
         z-index: 1;
     }
+    &__title {
+        font-size: var(--big-font-size);
+        color: var(--text-color);
+        position: relative;
+        // width: max-content;
+    }
+    &__subtitle {
+        font-size: var(--h2-font-size);
+    }
+    &__text {
+        display: block;
+        font-size: 0.8rem;
+        color: var(--text-color-alt);
+        font-weight: var(--font-bold);
+    }
 }
+
 .bg-home-alt {
     width: 50vw;
-    height: 100vh;
+    height: 50%;
     background: var(--second-color);
     position: absolute;
     right: 0;
@@ -240,7 +271,44 @@ img {
 }
 
 /* --**BUTTONS**-- */
+.button {
+    display: inline-block;
+    background-color: var(--color-send);
+    color: var(--text-color);
+    padding: 0.75rem 1rem;
+    border-radius: 0.3rem;
+    font-weight: var(--font-bold);
+    &:hover {
+        background-color: #06517c;
+    }
+    &--register {
+        width: 100%;
+        margin-bottom: var(--mb-1);
+    }
+}
 
 /* --**FOOTER**-- */
 
 /* --**MEDIA QUERIES**-- */
+
+// for large devices
+@media screen and (min-width: 1024px) {
+    .home__title::before,
+    .home__title::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    .home__title::before {
+        background: var(--frist-color);
+        animation: typewriter 6s steps(20) forwards;
+    }
+    .home__title::after {
+        width: 0.2rem;
+        background: #fff;
+        animation: typewriter 6s steps(20) forwards, blink 500ms steps(20) infinite;
+    }
+}

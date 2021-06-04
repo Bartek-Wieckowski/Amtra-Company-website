@@ -1,4 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;700&display=swap");
+@-webkit-keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
 /* --**VARIABLES CSS**-- */
 :root {
   --header-height: 3rem;
@@ -245,17 +268,40 @@ img {
   min-height: 100vh;
 }
 
+.home__content {
+  text-align: center;
+  margin: 0 auto;
+}
+
 .home__img {
   z-index: 1;
+  border-radius: 25%;
 }
 
 .home__data {
   z-index: 1;
 }
 
+.home__title {
+  font-size: var(--big-font-size);
+  color: var(--text-color);
+  position: relative;
+}
+
+.home__subtitle {
+  font-size: var(--h2-font-size);
+}
+
+.home__text {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-color-alt);
+  font-weight: var(--font-bold);
+}
+
 .bg-home-alt {
   width: 50vw;
-  height: 100vh;
+  height: 50%;
   background: var(--second-color);
   position: absolute;
   right: 0;
@@ -265,6 +311,46 @@ img {
 }
 
 /* --**BUTTONS**-- */
+.button {
+  display: inline-block;
+  background-color: var(--color-send);
+  color: var(--text-color);
+  padding: 0.75rem 1rem;
+  border-radius: 0.3rem;
+  font-weight: var(--font-bold);
+}
+
+.button:hover {
+  background-color: #06517c;
+}
+
+.button--register {
+  width: 100%;
+  margin-bottom: var(--mb-1);
+}
+
 /* --**FOOTER**-- */
 /* --**MEDIA QUERIES**-- */
+@media screen and (min-width: 1024px) {
+  .home__title::before,
+  .home__title::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .home__title::before {
+    background: var(--frist-color);
+    -webkit-animation: typewriter 6s steps(20) forwards;
+            animation: typewriter 6s steps(20) forwards;
+  }
+  .home__title::after {
+    width: 0.2rem;
+    background: #fff;
+    -webkit-animation: typewriter 6s steps(20) forwards, blink 500ms steps(20) infinite;
+            animation: typewriter 6s steps(20) forwards, blink 500ms steps(20) infinite;
+  }
+}
 /*# sourceMappingURL=style.css.map */
