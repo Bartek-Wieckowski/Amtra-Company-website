@@ -321,7 +321,7 @@ img {
     }
     &__img {
         width: 200px;
-        height: 155px;
+        height: 225px;
         margin-bottom: var(--mb-3);
     }
     &__title {
@@ -333,7 +333,9 @@ img {
         padding: 0 1.5rem;
     }
 }
-
+.icon {
+    color: black;
+}
 /* --**FOOTER**-- */
 
 /* --**MEDIA QUERIES**-- */

@@ -375,7 +375,7 @@ img {
 
 .oferts__img {
   width: 200px;
-  height: 155px;
+  height: 225px;
   margin-bottom: var(--mb-3);
 }
 
@@ -387,6 +387,10 @@ img {
 
 .oferts__description {
   padding: 0 1.5rem;
+}
+
+.icon {
+  color: black;
 }
 
 /* --**FOOTER**-- */
