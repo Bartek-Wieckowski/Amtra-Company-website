@@ -30,6 +30,7 @@
 
     --biggest-font-size: 3.5rem;
     --big-font-size: 3rem;
+    --huge-font-size: 1.75rem;
     --h1-font-size: 1.5rem;
     --h2-font-size: 1.25rem;
     --h3-font-size: 1.125rem;
@@ -37,8 +38,9 @@
     --small-font-size: 0.75rem;
 
     @media screen and (min-width: 968px) {
-        --big-font-size: 6rem;
-        --biggest-font-size: 3rem;
+        --big-font-size: 4.5rem;
+        --biggest-font-size: 6rem;
+        --huge-font-size: 3rem;
         --h1-font-size: 2.25rem;
         --h2-font-size: 1.75rem;
         --h3-font-size: 1.25rem;
@@ -109,14 +111,15 @@ a {
 img {
     max-width: 100%;
     height: auto;
-    display: block;
+    // display: block;
 }
 
 /* --**CSS CLASS**-- */
 .section {
     padding: 4rem 0 2rem;
     &__title {
-        font-size: var(--h1-font-size);
+        font-size: var(--huge-font-size);
+        font-weight: var(--font-semi);
     }
     &__subtitle {
         display: block;
@@ -304,6 +307,30 @@ img {
     }
     &__description {
         margin-bottom: var(--mb-3);
+    }
+}
+/* --**OFERTS**-- */
+.oferts {
+    color: var(--title-color);
+    &__container {
+        row-gap: 2.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    &__content {
+        text-align: center;
+    }
+    &__img {
+        width: 200px;
+        height: 155px;
+        margin-bottom: var(--mb-3);
+    }
+    &__title {
+        font-size: var(--h2-font-size);
+        color: var(--title-color-alt);
+        margin-bottom: var(--mb-3);
+    }
+    &__description {
+        padding: 0 1.5rem;
     }
 }
 
