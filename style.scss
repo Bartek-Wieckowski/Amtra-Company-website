@@ -225,6 +225,22 @@ img {
 .show-menu {
     right: 0;
 }
+/* --**BUTTONS**-- */
+.button {
+    display: inline-block;
+    background-color: var(--color-send);
+    color: var(--text-color);
+    padding: 0.75rem 1rem;
+    border-radius: 0.3rem;
+    font-weight: var(--font-bold);
+    &:hover {
+        background-color: #06517c;
+    }
+    &--register {
+        width: 100%;
+        margin-bottom: var(--mb-1);
+    }
+}
 
 /* --**HOME**-- */
 .home {
@@ -269,21 +285,25 @@ img {
     top: 0;
     clip-path: polygon(70% 0, 100% 0%, 100% 100%, 0% 100%);
 }
+/* --**ABOUT**-- */
+.about {
+    color: var(--title-color);
+    margin: 0 auto;
 
-/* --**BUTTONS**-- */
-.button {
-    display: inline-block;
-    background-color: var(--color-send);
-    color: var(--text-color);
-    padding: 0.75rem 1rem;
-    border-radius: 0.3rem;
-    font-weight: var(--font-bold);
-    &:hover {
-        background-color: #06517c;
+    &__img {
+        width: 100px;
+        justify-self: center;
     }
-    &--register {
-        width: 100%;
-        margin-bottom: var(--mb-1);
+    &__subtitle {
+        font-size: 2rem;
+        font-weight: var(--font-semi);
+    }
+    &__data {
+        text-align: center;
+        justify-self: center;
+    }
+    &__description {
+        margin-bottom: var(--mb-3);
     }
 }
 

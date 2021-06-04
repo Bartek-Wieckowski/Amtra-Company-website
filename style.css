@@ -261,6 +261,25 @@ img {
   right: 0;
 }
 
+/* --**BUTTONS**-- */
+.button {
+  display: inline-block;
+  background-color: var(--color-send);
+  color: var(--text-color);
+  padding: 0.75rem 1rem;
+  border-radius: 0.3rem;
+  font-weight: var(--font-bold);
+}
+
+.button:hover {
+  background-color: #06517c;
+}
+
+.button--register {
+  width: 100%;
+  margin-bottom: var(--mb-1);
+}
+
 /* --**HOME**-- */
 .home {
   position: relative;
@@ -310,23 +329,31 @@ img {
           clip-path: polygon(70% 0, 100% 0%, 100% 100%, 0% 100%);
 }
 
-/* --**BUTTONS**-- */
-.button {
-  display: inline-block;
-  background-color: var(--color-send);
-  color: var(--text-color);
-  padding: 0.75rem 1rem;
-  border-radius: 0.3rem;
-  font-weight: var(--font-bold);
+/* --**ABOUT**-- */
+.about {
+  color: var(--title-color);
+  margin: 0 auto;
 }
 
-.button:hover {
-  background-color: #06517c;
+.about__img {
+  width: 100px;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
-.button--register {
-  width: 100%;
-  margin-bottom: var(--mb-1);
+.about__subtitle {
+  font-size: 2rem;
+  font-weight: var(--font-semi);
+}
+
+.about__data {
+  text-align: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.about__description {
+  margin-bottom: var(--mb-3);
 }
 
 /* --**FOOTER**-- */
