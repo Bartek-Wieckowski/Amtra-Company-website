@@ -182,5 +182,7 @@ form.onsubmit = (event) => {
   ) {
     window.location.href = "#";
     console.log("Form SUBMITTED");
+    modal.classList.add("hidden");
+    overlay.classList.add("hidden");
   }
 };

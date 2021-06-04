@@ -446,6 +446,13 @@ img {
   width: 200px;
   height: 225px;
   margin-bottom: var(--mb-3);
+  -webkit-transition: transfrom 0.3s;
+  transition: transfrom 0.3s;
+}
+
+.oferts__img:hover {
+  -webkit-transform: translateY(-13px);
+          transform: translateY(-13px);
 }
 
 .oferts__title {
@@ -608,7 +615,7 @@ img {
 
 .modal {
   position: absolute;
-  top: 450%;
+  top: 75%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -623,7 +630,7 @@ img {
 
 .overlay {
   position: absolute;
-  top: 350%;
+  top: 0%;
   left: 0;
   width: 100%;
   height: 200%;
@@ -829,6 +836,9 @@ img {
     width: 200px;
     text-align: center;
   }
+  .about__description {
+    max-width: 750px;
+  }
   .oursContent__container {
     -ms-grid-columns: (minmax(220px, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -855,11 +865,21 @@ img {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
   }
+  .content-icon {
+    -webkit-transition: ease 0.8s;
+    transition: ease 0.8s;
+  }
+  .content-icon:hover {
+    color: var(--color-send);
+  }
   .content__description {
     display: block;
   }
   .content__text {
     display: block;
+  }
+  .content__text:hover {
+    color: var(--color-send);
   }
   .icon__link {
     display: inline-block;
