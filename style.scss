@@ -10,6 +10,20 @@
         background: transparent;
     }
 }
+@keyframes shake {
+    0%,
+    100% {
+        margin-left: 0;
+    }
+    20%,
+    80% {
+        margin-left: -12px;
+    }
+    40%,
+    60% {
+        margin-left: 12px;
+    }
+}
 /* --**VARIABLES CSS**-- */
 :root {
     --header-height: 3rem;
@@ -428,9 +442,19 @@ img {
     }
 }
 
-// MODAL
+/* --**MODAL**-- */
 .hidden {
     display: none;
+}
+.close-modal {
+    position: absolute;
+    top: 1.2rem;
+    right: 2rem;
+    font-size: 5rem;
+    color: #333;
+    cursor: pointer;
+    border: none;
+    background: none;
 }
 .modal {
     position: absolute;
@@ -455,8 +479,96 @@ img {
     backdrop-filter: blur(3px);
     z-index: 5;
 }
+/* --**FORM**-- */
+.form {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+    .field .input-area {
+        position: relative;
+    }
+    & input {
+        height: 3rem;
+        width: 100%;
+        padding: 0 1rem;
+        border: 1px solid gray;
+        font-size: var(--normal-font-size);
+        border-radius: 0.225rem;
+
+        &::placeholder {
+            font-weight: var(--font-semi);
+        }
+        &[type="submit"] {
+            margin-top: var(--mb-2);
+            border: none;
+            background: var(--color-send);
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            margin-bottom: var(--mb-1);
+            text-transform: uppercase;
+            &:hover {
+                background: #06517c;
+            }
+        }
+    }
+    .field {
+        width: 100%;
+        margin-bottom: 1rem;
+
+        & i {
+            position: absolute;
+            top: 50%;
+            font-size: 1.25rem;
+            pointer-events: none;
+            transform: translateY(-50%);
+        }
+        .error {
+            display: none;
+            &--icon {
+                right: 15px;
+                color: #dc3545;
+            }
+            &-text {
+                color: #dc3545;
+                text-align: right;
+                margin-top: 0.5rem;
+            }
+        }
+        &.shake {
+            animation: shake 0.3s ease-in-out;
+        }
+    }
+}
+.form .field.error .error {
+    display: block;
+}
+.form .field.error input {
+    border-color: #dc3545;
+}
+.agree {
+    color: var(--text-color-alt);
+    font-size: var(--small-font-size);
+    text-align: center;
+    &--term {
+        color: #dc3545;
+        font-weight: var(--font-semi);
+    }
+}
 
 /* --**MEDIA QUERIES**-- */
+// for small devices
+@media screen and (max-width: 640px) {
+    .form {
+        padding: 0;
+    }
+    .modal {
+        width: 100%;
+    }
+    .close-modal {
+        font-size: 3rem;
+    }
+}
 
 // for large devices
 @media screen and (min-width: 1024px) {
