@@ -146,7 +146,6 @@ img {
 /* --**LAYOUT**-- */
 .container {
   max-width: 960px;
-  width: calc(100% - 2rem);
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
 }
@@ -334,7 +333,6 @@ img {
 /* --**ABOUT**-- */
 .about {
   color: var(--title-color);
-  margin: 0 auto;
 }
 
 .about__img {
@@ -389,8 +387,34 @@ img {
   padding: 0 1.5rem;
 }
 
-.icon {
-  color: black;
+/* --**REGISTER**-- */
+.register {
+  padding: 2rem 0 2rem;
+  background: var(--second-color);
+  border-radius: 0.9rem;
+}
+
+.register__container {
+  padding: 0 1rem;
+}
+
+.register__title {
+  color: var(--text-color);
+  font-size: var(--big-font-size);
+  font-weight: var(--font-semi);
+}
+
+.register__description {
+  margin-bottom: var(--mb-3);
+}
+
+.register__text {
+  font-weight: var(--font-semi);
+}
+
+.register .icon {
+  font-size: 2.5rem;
+  margin-right: 1rem;
 }
 
 /* --**FOOTER**-- */
