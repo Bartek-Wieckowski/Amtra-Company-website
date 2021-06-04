@@ -89,7 +89,7 @@
   --z-modal: 1000;
 }
 
-@media screen and (min-width: 968px) {
+@media screen and (min-width: 1024px) {
   :root {
     --big-font-size: 4.5rem;
     --biggest-font-size: 6rem;
@@ -211,7 +211,7 @@ img {
   margin-top: 1rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .nav__menu {
     position: fixed;
     top: 0;
@@ -437,6 +437,9 @@ img {
 
 .oferts__content {
   text-align: center;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+          box-shadow: 3px 3px 5px 6px #ccc;
+  padding: 1rem 0;
 }
 
 .oferts__img {
@@ -453,6 +456,7 @@ img {
 
 .oferts__description {
   padding: 0 1.5rem;
+  margin-bottom: var(--mb-3);
 }
 
 /* --**REGISTER**-- */
@@ -524,6 +528,12 @@ img {
 .content__text {
   font-weight: var(--font-bold);
   font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .icon__link {
@@ -534,6 +544,7 @@ img {
   color: var(--color-send);
   font-size: 2rem;
   margin-right: 1rem;
+  cursor: pointer;
 }
 
 /* --**FOOTER**-- */
@@ -745,9 +756,20 @@ img {
   .home__img {
     width: 300px;
   }
+  .home__data {
+    max-width: 550px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .home__content {
+    max-width: 720px;
+  }
+  .button-register {
+    width: 100%;
+  }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
   .nav__menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -780,9 +802,96 @@ img {
   .active-link::before {
     background-color: var(--text-color);
   }
+  .home__title {
+    margin-top: var(--mb-5);
+  }
+  .register {
+    padding: 4rem 1rem 2rem;
+  }
+  .register__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .register__description {
+    max-width: 400px;
+  }
+  .register__text {
+    margin-bottom: var(--mb-2);
+  }
+  .button--register-down {
+    width: 200px;
+    text-align: center;
+  }
+  .oursContent__container {
+    -ms-grid-columns: (minmax(220px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  .content {
+    min-height: 350px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+    -webkit-transition: transfrom 0.3s;
+    transition: transfrom 0.3s;
+  }
+  .content:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .content__description {
+    display: block;
+  }
+  .content__text {
+    display: block;
+  }
+  .icon__link {
+    display: inline-block;
+    color: var(--text-color);
+    font-size: var(--h3-font-size);
+    margin-left: 2rem;
+    vertical-align: top;
+  }
+  .bxs-right-arrow-circle {
+    margin-right: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 @media screen and (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+  .home__data {
+    max-width: 1024px;
+  }
+  .home__title {
+    width: 100%;
+  }
+  .home__img {
+    width: 425px;
+  }
   .home__title::before,
   .home__title::after {
     content: "";
@@ -793,6 +902,7 @@ img {
     left: 0;
   }
   .home__title::before {
+    padding-top: var(--mb-5);
     background: var(--frist-color);
     -webkit-animation: typewriter 6s steps(20) forwards;
             animation: typewriter 6s steps(20) forwards;

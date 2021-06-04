@@ -51,7 +51,7 @@
     --normal-font-size: 0.938rem;
     --small-font-size: 0.75rem;
 
-    @media screen and (min-width: 968px) {
+    @media screen and (min-width: 1024px) {
         --big-font-size: 4.5rem;
         --biggest-font-size: 6rem;
         --huge-font-size: 3rem;
@@ -175,7 +175,7 @@ img {
     // border: 1px solid red;
 
     &__menu {
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 767px) {
             position: fixed;
             top: 0;
             right: -100%;
@@ -358,12 +358,15 @@ img {
 /* --**OFERTS**-- */
 .oferts {
     color: var(--title-color);
+
     &__container {
         row-gap: 2.5rem;
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     }
     &__content {
         text-align: center;
+        box-shadow: 3px 3px 5px 6px #ccc;
+        padding: 1rem 0;
     }
     &__img {
         width: 200px;
@@ -377,6 +380,7 @@ img {
     }
     &__description {
         padding: 0 1.5rem;
+        margin-bottom: var(--mb-3);
     }
 }
 /* --**REGISTER**-- */
@@ -430,6 +434,8 @@ img {
     &__text {
         font-weight: var(--font-bold);
         font-size: 2rem;
+        display: flex;
+        align-items: center;
     }
 }
 .icon__link {
@@ -439,6 +445,7 @@ img {
     color: var(--color-send);
     font-size: 2rem;
     margin-right: 1rem;
+    cursor: pointer;
 }
 /* --**FOOTER**-- */
 .footer {
@@ -610,10 +617,20 @@ img {
         &__img {
             width: 300px;
         }
+        &__data {
+            max-width: 550px;
+            justify-self: center;
+        }
+        &__content {
+            max-width: 720px;
+        }
+    }
+    .button-register {
+        width: 100%;
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
     .nav {
         &__menu {
             display: flex;
@@ -643,10 +660,82 @@ img {
             background-color: var(--text-color);
         }
     }
+    .home {
+        &__title {
+            margin-top: var(--mb-5);
+        }
+    }
+    .register {
+        padding: 4rem 1rem 2rem;
+        &__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__description {
+            max-width: 400px;
+        }
+        &__text {
+            margin-bottom: var(--mb-2);
+        }
+    }
+    .button--register-down {
+        width: 200px;
+        text-align: center;
+    }
+    // .oursContent__container {
+    //     grid-template-columns: 1fr 1fr 1fr;
+    // }
+    .oursContent__container {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .content {
+        min-height: 350px;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 1.5rem;
+        padding: 1rem;
+        text-align: center;
+        transition: transfrom 0.3s;
+        &:hover {
+            transform: scale(1.1);
+        }
+        &__description {
+            display: block;
+        }
+        &__text {
+            display: block;
+        }
+    }
+    .icon__link {
+        display: inline-block;
+        color: var(--text-color);
+        font-size: var(--h3-font-size);
+        margin-left: 2rem;
+        vertical-align: top;
+    }
+    .bxs-right-arrow-circle {
+        margin-right: 2rem;
+        display: flex;
+        align-items: center;
+    }
 }
 
 // for large devices
 @media screen and (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+    .home__data {
+        max-width: 1024px;
+    }
+    .home__title {
+        width: 100%;
+    }
+    .home__img {
+        width: 425px;
+    }
     .home__title::before,
     .home__title::after {
         content: "";
@@ -657,6 +746,7 @@ img {
         left: 0;
     }
     .home__title::before {
+        padding-top: var(--mb-5);
         background: var(--frist-color);
         animation: typewriter 6s steps(20) forwards;
     }
