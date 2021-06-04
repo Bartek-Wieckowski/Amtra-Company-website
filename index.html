@@ -23,13 +23,13 @@
                 <div class="nav__menu nav__menu--js">
                     <ul class="nav__list nav__list--primary">
                         <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
-                        <li class="nav__item"><a href="#" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#" class="nav__link">Oferts</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#oferts" class="nav__link">Oferts</a></li>
                     </ul>
 
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
-                        <li class="nav__item"><a href="#" class="nav__link">Register</a></li>
+                        <li class="nav__item"><a href="#footer" class="nav__link">Contact</a></li>
+                        <li class="nav__item"><a href="#register" class="nav__link">Register</a></li>
                     </ul>
                 </div>
 
@@ -46,8 +46,8 @@
             <article class="home__data">
                 <h1 class="home__title">Welcome to our site</h1>
                 <p class="home__subtitle section__subtitle">See what we have to offer you</p>
-                <a href="#" class="button button--register">Register for free</a>
-                <span class="home__text">Register for Network for free and test Skills, Business and Partner for 14
+                <a href="#register" class="button button--register">Register for free</a>
+                <span class="home__text">Register for free on our platform and test any device you want for 14
                     days.</span>
             </article>
             </article>
@@ -56,7 +56,7 @@
         </section>
     </section>
     <!-- **-- ABOUT --** -->
-    <section class="about section container">
+    <section class="about section container" id="about">
         <div class="about__container grid">
             <img src="/img/logo.png" alt="Logo" class="about__img">
             <h2 class="section__title">One site - three products</h2>
@@ -70,7 +70,7 @@
     </section>
 
     <!-- **-- OFERTS --** -->
-    <section class="oferts section container">
+    <section class="oferts section container" id="oferts">
         <h2 class="section__title">Offering</h2>
         <p class="section__subtitle">Our amazing products</p>
         <div class="oferts__container grid">
@@ -111,13 +111,14 @@
         </div>
     </section>
     <!-- **-- REGISTER --** -->
-    <section class="register section container">
+    <section class="register section container" id="register">
+
         <div class="register__container grid">
             <article class="register__content">
                 <article class="register__data">
                     <h2 class="register__title">Get Started</h2>
-                    <p class="register__description">Register for free for Cinode Network and also get the opportunity
-                        to start your free trial of 14 days with Skills, Business, and Partner.</p>
+                    <p class="register__description">Register for free on our platform and test any device you want for
+                        14 days.</p>
                 </article>
                 <article class="register__summary">
                     <p class="register__text"><i class='bx bx-lock-open-alt icon'></i>Full access.</p>
@@ -125,12 +126,15 @@
                     <p class="register__text"><i class='bx bx-user icon'></i>Over ten thousands of users.</p>
                 </article>
             </article>
-            <a href="#" class="button button--register">Register for free</a>
+            <a href="#modal" class="button button--register show-modal">Register for free</a>
+
+
+
 
         </div>
     </section>
     <!-- **-- OURS CONTENT --** -->
-    <section class="oursContent section ">
+    <section class="oursContent section">
         <div class="oursContent__container container grid">
             <article class="content">
                 <p class="content__text"><i class='bx bxl-blogger content-icon'></i>BLOG</p>
@@ -157,7 +161,7 @@
         </div>
 
     </section>
-    <footer class="footer section">
+    <footer class="footer section" id="footer">
         <div class="footer__container container">
             <div class="footer__content">
                 <a href="#" class="footer__logo">AMTRA Company</a>
@@ -182,6 +186,49 @@
 
     </footer>
 
+    <div class="modal hidden" id="modal">
+        <button class='close-modal'>&times;</button>
+        <!-- **--FORM--** -->
+        <form action="#" class="form">
+            <div class="field first-name">
+                <div class="input-area">
+                    <input type="text" placeholder="First Name">
+                    <i class='bx bx-alarm-exclamation error error--icon'></i>
+                </div>
+                <div class="error error-text">First Name cannot be empty</div>
+            </div>
+
+            <div class="field last-name">
+                <div class="input-area">
+                    <input type="text" placeholder="Last Name">
+                    <i class='bx bx-alarm-exclamation error error--icon'></i>
+                </div>
+                <div class="error error-text">Last Name cannot be empty</div>
+            </div>
+
+            <div class="field email">
+                <div class="input-area">
+                    <input type="text" placeholder="Email Address">
+                    <i class='bx bx-alarm-exclamation error error--icon'></i>
+                </div>
+                <div class="error error-text">Looks like this is not an email</div>
+            </div>
+
+            <div class="field password">
+                <div class="input-area">
+                    <input type="password" placeholder="Password">
+                    <i class='error bx bx-alarm-exclamation  error--icon'></i>
+                </div>
+                <div class="error error-text">Password cannot be empty</div>
+            </div>
+
+            <input type="submit" value="Claim your free trial">
+            <div class="agree">By clicking the button, you are agreeing to our <a href="#" class="agree--term">Terms and
+                    Services</a></div>
+        </form>
+
+    </div>
+    <div class="overlay hidden"></div>
 
 
 
