@@ -218,7 +218,7 @@ img {
     right: -100%;
     width: 70%;
     padding: 2rem;
-    text-align: left;
+    text-align: center;
     background-color: var(--body-color);
     -webkit-transition: 0.4s;
     transition: 0.4s;
@@ -244,6 +244,16 @@ img {
   }
   .nav__menu .button--red:hover {
     color: var(--text-color);
+  }
+  .nav__menu .button--white {
+    background-color: var(--body-color);
+    padding: 0.3rem 1rem;
+    border-radius: 1rem;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+  .nav__menu .button--white:hover {
+    color: var(--color-send);
   }
 }
 

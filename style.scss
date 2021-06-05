@@ -180,7 +180,7 @@ img {
             right: -100%;
             width: 70%;
             padding: 2rem;
-            text-align: left;
+            text-align: center;
             background-color: var(--body-color);
             transition: 0.4s;
             box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
@@ -202,6 +202,16 @@ img {
                 transition: 0.3s ease-in-out;
                 &:hover {
                     color: var(--text-color);
+                }
+            }
+            .button--white {
+                background-color: var(--body-color);
+                padding: 0.3rem 1rem;
+                border-radius: 1rem;
+
+                transition: 0.3s ease-in-out;
+                &:hover {
+                    color: var(--color-send);
                 }
             }
         }
