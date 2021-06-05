@@ -186,3 +186,36 @@ form.onsubmit = (event) => {
     overlay.classList.add("hidden");
   }
 };
+
+// Animation JS Scroll Reveal
+
+const animationReveal = ScrollReveal({
+  origin: "right",
+  distance: "30px",
+  duration: 2000,
+  reset: true,
+});
+
+animationReveal.reveal(`.about`, {
+  interval: 200,
+});
+animationReveal.reveal(`.oferts__title`, { origin: "top" });
+
+const jumpText = ScrollReveal({
+  duration: 1000,
+});
+
+jumpText.reveal(`.bx-lock-open-alt`);
+jumpText.reveal(`.bx-credit-card-alt`, { delay: 500 });
+jumpText.reveal(`.bx-user `, { delay: 1250 });
+
+const linksNavigation = ScrollReveal({
+  origin: "top",
+  distance: "30px",
+  duration: 2000,
+  reset: false,
+  mobile: false,
+});
+
+// linksNavigation.reveal(`.nav__list--primary`);
+linksNavigation.reveal(`.nav__list`, { delay: 500 });
