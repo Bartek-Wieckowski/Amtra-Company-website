@@ -332,7 +332,6 @@ img {
         font-size: var(--big-font-size);
         color: var(--text-color);
         position: relative;
-        // width: max-content;
     }
     &__subtitle {
         font-size: var(--h2-font-size);
@@ -357,7 +356,6 @@ img {
 /* --**ABOUT**-- */
 .about {
     color: var(--title-color);
-    // margin: 0 auto;
 
     &__img {
         width: 100px;
@@ -630,6 +628,7 @@ img {
 }
 
 /* --**MEDIA QUERIES**-- */
+
 // for small devices
 @media screen and (max-width: 640px) {
     .form {

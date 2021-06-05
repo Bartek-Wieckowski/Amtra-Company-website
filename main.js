@@ -217,5 +217,4 @@ const linksNavigation = ScrollReveal({
   mobile: false,
 });
 
-// linksNavigation.reveal(`.nav__list--primary`);
 linksNavigation.reveal(`.nav__list`, { delay: 500 });
